@@ -1,0 +1,46 @@
+.login {
+    background-color: #fff;
+    margin: 100px auto;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .big-heading {
+    color: #6e6e6e;
+      text-align: center;
+  }
+
+  input.username {
+    margin-bottom: 20px;
+  }
+  
+  .checkUsernameAvailability {
+    position: relative;
+    bottom: 10px;
+  
+    color: red;
+  }
+  
+  input.password {
+    margin-bottom: 10px;
+  
+  }
+  
+  .button {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .extra {
+      margin-top: 10px;
+      text-align: center;
+  }
+
+  @media screen and (max-width: 500px) {
+    .login {
+      width: 85%;
+    }
+  }

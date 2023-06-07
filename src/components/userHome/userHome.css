@@ -1,0 +1,76 @@
+.userForm {
+    margin: auto;
+    margin-top: 50px;
+    width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 30px 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.userHeading {
+    text-align: center;
+    margin-top: 30px;
+   
+}
+.pendingText {
+    margin-bottom: 30px;
+}
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputGroup > div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.inputGroup input {
+    width: 100%;
+}
+
+.apply {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.application-btn {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.logout-btn {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 80%;
+}
+
+.application-status {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.delete-application {
+    margin-top: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+    .userHome {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .userForm {
+        width: 80%;
+    }
+    .application-btn {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .logout-btn {
+        margin-left: 70%;
+    }
+}

@@ -1,0 +1,68 @@
+.list-item-approved {
+    background-color: rgb(249, 255, 249);
+    margin: 20px 40px 20px 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid rgb(48, 247, 48);
+}
+
+.list-item-rejected {
+    background-color: rgb(255, 248, 248);
+    margin: 20px 40px 20px 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid rgb(247, 48, 48);
+}
+
+.list-item-pending {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    margin: 20px 40px 20px 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid rgb(124, 133, 253);
+}
+
+.page-selected {
+    background-color:dodgerblue;
+    color: white;
+}
+.page-disabled {
+    display: none;
+}
+
+.list-heading {
+    margin: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: purple
+}
+
+.selection-btn {
+    margin-bottom: 10px;
+}
+.selection-btn > button {
+    width: 90px;
+}
+
+
+@media screen and (max-width: 450px) {
+  .list-item-approved, .list-item-pending, .list-item-rejected {
+      flex-direction: column;
+  }
+  .decision-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content:start;
+  }
+  .selection-btn > button {
+      margin-top: 10px;
+    margin-right: 10px;
+}
+}
