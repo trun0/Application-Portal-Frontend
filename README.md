@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Application Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
 
-## Available Scripts
+- [Overview](#overview)
+  - [Admin](#admin)
+  - [User](#user)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-In the project directory, you can run:
 
-### `npm start`
+## Overview
+A React app for an job application platfrom.
+### Admin
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Login on the admin route [https://easy-application-portal.netlify.app/admin](https://easy-application-portal.netlify.app/admin)
+username = "admin"
+password = "12345"
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Note- currently there is only one admin.
 
-### `npm test`
+### User
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Signup and Login on the user route [https://easy-application-portal.netlify.app](https://easy-application-portal.netlify.app)
 
-### `npm run build`
+### The challenge
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+User should be able to
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Send details through the application form
+- Update resume while it is in pending status
+- View the apllication status(pending, approved, rejected)
+- Receive email updates on the application
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Admin should be able to 
 
-### `npm run eject`
+- See different category of application (pending, approved, rejected).
+- Accept or Reject a pending application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Screenshots
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Candidate-Home](./screenshots/candidate-home.jpg)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Admin-Home](./screenshots/admin-home.jpg)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Links
 
-## Learn More
+- Frontend Solution URL: [https://github.com/trun0/Application-Portal-Frontend](https://github.com/trun0/Application-Portal-Frontend)
+- Backend Solution URL: [https://github.com/trun0/Application-Portal-Backend](https://github.com/trun0/Application-Portal-Backend)
+- Live Site URL: [https://easy-application-portal.netlify.app](https://easy-application-portal.netlify.app)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## My process
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Built with
 
-### Code Splitting
+- Semantic HTML5 markup
+- CSS custom properties
+- [React](https://reactjs.org/) - JS library
+- [PostgreSQL](https://www.postgresql.org/) - SQL Database 
+- [Nodemailer](https://nodemailer.com/about/) -  Module for Node.js applications to allow easy email sending.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### What I learned
 
-### Analyzing the Bundle Size
+I learned how to send emails through node applications.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Continued development
 
-### Making a Progressive Web App
+I look forward to to learn new concepts of React and make this project better.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Useful resources
 
-### Advanced Configuration
+- [Render](https://render.com/) - This helped me to host my server and database.
+- [Netlify](https://www.netlify.com/) - This helped me to host my frontend.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Author
 
-### Deployment
+Tarun Kumar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
