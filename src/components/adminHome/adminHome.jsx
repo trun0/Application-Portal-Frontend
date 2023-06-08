@@ -4,10 +4,12 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import List from "../candidate/list";
 import Pending from "../candidate/pending";
+import Loading from "../loading";
 
 function AdminHome() {
   const [list, setList] = useState([]);
   const [message, setMessage] = useState("pending");
+  const [loading, setLoading] = useState(true);
 
   const navigate = useNavigate();
 
@@ -24,6 +26,7 @@ function AdminHome() {
   }
 
   function initializeList(type) {
+    setLoading(true);
     axios
       .get(process.env.REACT_APP_SERVER_URL + "applicationsServer/" + type)
       .then(function (response) {
@@ -36,7 +39,9 @@ function AdminHome() {
       .catch(function (error) {
         console.log(error);
       })
-      .then(function () {});
+      .finally(function () {
+        setLoading(false);
+      });
 
     const tags = document.querySelectorAll(".navlink-active");
     tags.forEach((tag) => {
@@ -92,7 +97,12 @@ function AdminHome() {
         </div>
       </div>
       <div className="candidate-list">
-        {message === "pending" ? (
+        <h1 className="list-heading">
+          <center>{message[0].toUpperCase() + message.substring(1)}</center>
+        </h1>
+        {loading ? (
+          <Loading text="Loading, Please wait..." />
+        ) : message === "pending" ? (
           <Pending list={list} initializeList={initializeList} />
         ) : (
           <List list={list} status={message} />

@@ -20,11 +20,6 @@ function List(props) {
   }
   return (
     <div>
-      <h1 className="list-heading">
-        <center>
-          {props.status[0].toUpperCase() + props.status.substring(1)}
-        </center>
-      </h1>
       {props.list.length > 0 ?
         props.list.slice(page * 5 - 5, page * 5).map((item, i) => {
           return (

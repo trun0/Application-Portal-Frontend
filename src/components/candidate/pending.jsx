@@ -66,10 +66,6 @@ function Pending(props) {
 
   return (
     <div>
-      <h1 className="list-heading">
-        <center>Pending</center>
-      </h1>
-
       {loading ? (
         <Loading text={loadingText} />
       ) : props.list && props.list.length > 0 ? (

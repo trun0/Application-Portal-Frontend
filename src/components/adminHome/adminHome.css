@@ -32,6 +32,10 @@
   border-right: 3px solid rgb(24, 105, 255);
 }
 
+.list-heading {
+  margin: 20px;
+}
+
 .candidate-list {
   width: 100%;
   margin: 0 10%;
