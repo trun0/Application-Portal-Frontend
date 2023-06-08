@@ -16,6 +16,7 @@ function UserHome() {
     const [resumeData, setResumeData] = useState("");
     const [resumeFilename, setResumeFilename] = useState("");
     const [heading, setHeading] = useState("Enter Your Details");
+    const [inactiveSubmitButton, setInactiveSubmitButton] = useState(false);
 
     useEffect(() => {
         initialize();
@@ -85,6 +86,7 @@ function UserHome() {
 
     function handleUser() {
         if (checkInputValidity()) {
+            setInactiveSubmitButton(true);
             const SubmitToastId = toast.loading("Submitting Application...", {
                 position: toast.POSITION.TOP_RIGHT
             });
@@ -111,6 +113,7 @@ function UserHome() {
                 )
                 .then(function (response) {
                     console.log("fd", response, "ost");
+                    setInactiveSubmitButton(false);
                     if (response.data.status) {
                         toast.update(SubmitToastId, { 
                             render: "Application sent.You will shortly receive comfirmation email. Thank you for applying",
@@ -139,6 +142,7 @@ function UserHome() {
 
     function handleResumeUpdate() {
         if (checkInputValidity()) {
+            setInactiveSubmitButton(true);
             const UpdateToastId = toast.loading("Updating Resume...", {
                 position: toast.POSITION.TOP_RIGHT
             });
@@ -159,6 +163,7 @@ function UserHome() {
                 )
                 .then(function (response) {
                     console.log("fd", response, "sdfsdg");
+                    setInactiveSubmitButton(false);
                     if (response.data.status) {
                         toast.update(UpdateToastId, { 
                             render: "Resume Updated.You will shortly receive comfirmation email",
@@ -322,7 +327,7 @@ function UserHome() {
                         }
                         className="btn btn-success application-btn"
                         disabled={
-                            status === "approved" || status === "rejected"
+                            status === "approved" || status === "rejected" || inactiveSubmitButton
                         }
                     >
                         {status === "Not sent"
