@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Application portal",
+  "name": "Job application portal",
   "icons": [
     {
       "src": "favicon.ico",

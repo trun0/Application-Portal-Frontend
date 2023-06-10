@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import List from "../candidate/list";
 import Pending from "../candidate/pending";
 import Loading from "../loading";
+import { ToastContainer } from 'react-toastify';
+
 
 function AdminHome() {
   const [list, setList] = useState([]);
@@ -70,6 +72,7 @@ function AdminHome() {
 
   return (
     <div className="adminHome">
+      <ToastContainer />
       <div className="sidebar">
         <div className="sidebar-nav">
           <div className="sidebar-heading">

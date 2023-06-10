@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./candidate.css";
 import axios from "axios";
 import Loading from "../loading";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Pending(props) {
   const [loading, setLoading] = useState(false);
@@ -28,9 +30,14 @@ function Pending(props) {
       .then(function (response) {
         if (response.data.status) {
           //alert(response.data.message);
+          toast.success(response.data.message, {
+            position: toast.POSITION.TOP_RIGHT
+          });
           props.initializeList("pending");
         } else {
-          alert(response.data.message);
+          toast.error(response.data.message || "Some error occurred", {
+            position: toast.POSITION.TOP_RIGHT
+          });
         }
       })
       .catch(function (error) {
@@ -51,9 +58,14 @@ function Pending(props) {
       .then(function (response) {
         if (response.data.status) {
           //alert(response.data.message);
+          toast.success(response.data.message, {
+            position: toast.POSITION.TOP_RIGHT
+          });
           props.initializeList("pending");
         } else {
-          alert(response.data.message);
+          toast.error(response.data.message || "Some error occurred", {
+            position: toast.POSITION.TOP_RIGHT
+          });
         }
       })
       .catch(function (error) {
